@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Risk of Using Smartphones</title>
+    <link rel="stylesheet" href="risk.css" type="text/css" media="all" />
+    <script type="text/javascript">
+      function hide_all(){
+        var displayid,
+            getdisplayid=document.querySelectorAll("div.display");
+        for(var i=0;i<getdisplayid.length;i++){
+          displayid=getdisplayid[i];
+          displayid.style.display="none";
+        }
+      }
+
+      function initAll() {
+        hide_all();
+        document.getElementById("home").style.display="block";
+        }
+
+      function change_content(n) {
+        hide_all();
+        var getdisplayid=document.querySelectorAll("div.display");
+        getdisplayid[n].style.display="block";
+      	}
+
+      function show_question(){
+        var qn=document.getElementById("form");
+        qn.style.visibility="visible";
+      }
+
+      var show=[true, true, true, true, true, true];
+      function show_more_desgins(m){
+        getp=document.getElementById("more_desgins"+m);
+        if (show[m]){
+          getp.style.display="block";
+          show[m]=false;
+        }
+        else{
+          getp.style.display="none";
+          show[m]=true;
+        }
+      }
+
+    </script>
+  </head>
+
+  <body onload= "initAll();">
+    <div class="container">
+      <div class="header" id="header" >
+        <div><img id="headerpic" src="http://images.indianexpress.com/2016/12/smartphones-thinkstock-75911.jpg" alt="header picture" ></div>
+        <button class="index" onclick="change_content(0)"  style="margin-left:22.5%" >Home</button>
+        <button class="index" onclick="change_content(1)" >Types of Risks</button>
+        <button class="index" onclick="change_content(2)" >E-privacy Designs</button>
+        <button class="index" onclick="change_content(3)" style="margin-right:22.5%" >Questionnarie</button>
+      </div>
+      <div class="body">
+        <div class="pageup">
+          <div id="pu" ><a href="#headerpic">page up</a></div>
+        </div>
+        <div class="content">
+
+          <div class="display" id="home">
+            <video></video> video page
+          </div>
+
+
+          <div class="display" id="risks">
+
+            <div class="more_risks" >Smartphone Risks</div>
+            <div>Information systems privacy is to protect individual user against the system’s misuse or failure to protect the user’s the private data
+              In light of the frequent usage of smartphones, leakage of personal data increases rapidly.<br>
+              It is thus vital that user privacy is given sufficient consideration when discussing smartphone security.
+              In the following, users’ smartphone security, namely password setting and anti-virus software installation are analysed.
+            </div><br>
+
+            <div class="more_risks" >GPS</div>
+            <div>Most of all current smartphones support Assisted GPS. More smartphones will support GLONASS (e.g., iPhone 4S and Samsung GALAXY Note)<br>
+              Your friends or strangers can stalk you base on our check-in locations. In other words, you say “Please Stalk Me”.
+              Some apps may contains malicious program that store your GPS information frequently. These data may be used to analysis your travel pattern, who you have met. These information may be used for erratic purpose.
+            </div><br>
+
+            <div class="more_risks" >Wifi Hotspot</div>
+            <div>Portable hotspot-an ad hoc wireless access point that is created by a dedicated hardware device or a smartphone feature
+              that shares the phone’s cellular data have become an indispensable feature for the public-university students, business travelers and others who want internet connectivity on-the-go on multiple devices.<br>
+              If one’s Wifi-Network is unsecured, one’s network traffic and confidential information are easily tracked down and accessed by everyone. Confidential information includes email login information. It has come to the attention that majority of them did not set passwords for their wi-fi hotspot.
+              Without a secured wifi hotspot, one’s data sent over the network are in all likelihood being unencrypted by malicious users such as identity theft.
+            </div><br>
+
+            <div class="more_risks" >Apps</div>
+            <div>Most of apps require accesses of personal information,
+              which might result in exposure of those items to malicious users.
+              They might take this opportunity to implant various malicious programs
+              and track down users’ actions. <br>For example, illegal programs embed on
+              users’ phones to steal their photos and contacts, worse still, spy on users
+              through hacking user’s mobile camera. Therefore,
+              it is vital to be aware of own privacy during apps installation.
+            </div><br>
+
+            <div class="more_risks" >Google Drive</div>
+            <div>sth
+            </div><br>
+
+            <div class="more_risks" >SMS w/URL: Malvertisement</div>
+            <div>The malware could be anything, from a Trojan virus to ransomware
+                  is an serious issue and has been tripled since 2013.<br>
+                  Malicious downloading and hacking started once the user click on the URL.
+                  Some users think if they leave the site immediately,
+                  malware will stop. However, malicious code is undetected and
+                  hacks continues that the user has no idea what is going to be hacked.
+            </div>
+
+          </div>
+
+          <div class="display" id="designs" >
+            <ol>
+              <li onclick="show_more_desgins(0)">Get the latest updates from your mobile manufacturer<br>
+                <p class="more_desgins" id="more_desgins0">In most of the situation, the newly discovered bugs or loopholes can be modified by the latest software update. Therefore, always updating the software to date is important for E-privacy.
+                </p><br></li>
+              <li onclick="show_more_desgins(1)">Install anti-virus program<br>
+                <p class="more_desgins" id="more_desgins1">2</p><br></li>
+              <li onclick="show_more_desgins(2)">Do not download apps from unknown source<br>
+                <p class="more_desgins" id="more_desgins2">Users can download apps from google play store and apple store. However, some of the apps can not be downloaded in these store. This may due to the app is inappropriate, contain virus,etc. Some of the user may download it from other source. Also, some of them may be free in other source but not free in google play and apple store. However, downloading apps from source other than google play store and apple store increase the chances of infected by virus. Also, it may create loophole for hackers to steal users information.
+                </p><br></li>
+              <li onclick="show_more_desgins(3)">Check the authorization required before downloading apps<br>
+                <p class="more_desgins" id="more_desgins3">When users download apps from google play store or apple store, they need to agree the app to access some authority such as Photos/Media/Files,etc. Users need to press the accept button in order to download and use that app. Accepting the app to access your Photos/Media/Files means that the app can store, modify your photos, media and files. Therefore, users should think whether the app requires the authorization to work or the app is just trying to steal your information.
+                </p><br></li>
+              <li onclick="show_more_desgins(4)">Stay alert to abnormal phone situation and reset phone  if needed<br>
+                <p class="more_desgins" id="more_desgins4">Abnormal phone situation such as rapid reduce of speed and batteries may indicated some apps are running. This apps may contains virus and hacker is stealing information  from your phone. Hence, users should consider resetting the phone if above situation occurs in their phone.
+                </p><br></li>
+              <li onclick="show_more_desgins(5)">Do not connect public wi-fi (unsecured wi-fi) if possible
+                <p class="more_desgins" id="more_desgins5">	  Try to avoid using unknown, unsecured wi-fi. Some hackers may set-up some phishing wi-fi hotspots that the SSID is same as what user expected. For example, the name of the shopping mall, restaurant. If users connected their mobile phone into these phishing wifi, their information and their internet activities may be stolen by hackers.
+	              <br>Also, some unsecured wi-fi may be set-up by some shop or restaurant so as to provide free wi-fi for their customers. However, the security level of these wi-fi may be low. Hackers may hack the wi-fi and steal the information from  other users connecting that wi-fi.
+	              <br>Therefore, users should avoid using unknown or unsecure wi-fi. Wi-fi provided from your telecommunication service provider is a good example of trusted wi-fi.
+                </p></li>
+            </ol>
+          </div>
+
+
+          <div class="display" id="Questionnarie" >
+            <h1>Reason for using Questionnarie</h1>
+            <p>1-Consideration for respondents<br>
+              The format of questionnaires is close-ended. Therefore, it is easier for respondents to answer and lower the risk of respondents losing patience.
+            </p>
+            <br>
+            <p>2-Consideration for group members<br>
+                Close-ended questionnaires are also easier for analyze. As there are less irrelevant, complicated and confused answer (open-ended questions) received from respondents, group members are able to analyze and compare the results efficiently.
+            </p>
+            <br>
+            <p>
+              3-Consideration for results’ reliability <br>
+              Questionnaires reduce bias and intrusion when comparing to face-to-face interviews and group interviews. Questions in questionnaires avoid leading questions and thus, reduce bias as to ensure reliability of the result. Moreover, there is no research data or opinions from other respondents to interrupt one respondents from answering the questionnaire. Therefore, results are more reliable.
+            </p>
+            <br>
+            <h1>Target Group</h1>
+            <p>
+              Invited respondents are university students and also, smartphone users aged 18-23 in order to find out their experiences in using smartphones and their awareness of the privacy risk and security associated with using smartphones.
+            </p>
+            <br>
+            <h1>Distribution</h1>
+            <p>
+              Paper-based questionnaires were distributed on the 9th March 2017. To ensure the respondents are solely university students, the above-mentioned method was adopted. For online surveys, no doubt, it is relatively cost-effective and time-effective, however, unwanted responses from other groups of people may be received. This may cause time to separate the unwanted responses.
+            </p>
+            <br>
+            <button onclick="show_question()">Start quiz!</button>
+
+            <h1 class="form" style="font-size:2.2em;visibility:hidden;">Qucik test to check your Smartphone security</h1>
+            <br>
+            <form id="form" >
+              <fieldset>
+                <legend>Personal Information:</legend>
+                Q1. What is your gender?<br>
+                <input type="radio" name="gender">Male
+                <input type="radio" name="gender">Female<br>
+                Q2: Are you a currently-enrolled university student?<br>
+                <input type="radio" name="ansq2">Yes
+                <input type="radio" name="ansq2">No<br>
+              </fieldset>
+              <br>
+              <fieldset>
+                <legend>Type of Risk:</legend>
+                Q1.1 Have you ever suffered from the leakage of personal data through smartphones?<br>
+                <input type="radio" name="ansq1.1">Yes
+                <input type="radio" name="ansq1.1">No<br>
+                Q2.1 Did you take steps to protect information on your smartphones by setting passwords for your phones?<br>
+                <input type="radio" name="ansq2.1">Yes
+                <input type="radio" name="ansq2.1">No<br>
+                Q2.2 Did you take steps to protect information on your smartphones by enabling auto screen lock?<br>
+                <input type="radio" name="ansq2.2">Yes
+                <input type="radio" name="ansq2.2">No<br>
+                Q2.3 Did you take steps to protect information on your smartphones by installing anti-virus/anti-theft software?<br>
+                <input type="radio" name="ansq2.3">Yes
+                <input type="radio" name="ansq2.3">No<br>
+                Q3.1 Did you set password for your Wifi Hotspot?<br>
+                <input type="radio" name="ansq3.1">Yes
+                <input type="radio" name="ansq3.1">No<br>
+                Q4.1 Did you install apps to your smartphones?<br>
+                <input type="radio" name="ansq4.1">Yes
+                <input type="radio" name="ansq4.1">No<br>
+                Q4.2 Would you consider “Privacy Policy” and “Terms and Conditions” of an app before its installation?<br>
+                <input type="radio" name="ansq4.2">Yes
+                <input type="radio" name="ansq4.2">No<br>
+                Q4.3 Are you aware of what information being uploaded and accessed when downloading apps?<br>
+                <input type="radio" name="ansq4.3">Yes
+                <input type="radio" name="ansq4.3">No<br>
+                Q6.1 Did you receive any (suspicious) SMS w/URL?<br>
+                <input type="radio" name="ansq6.1">Yes
+                <input type="radio" name="ansq6.1">No<br>
+                Q6.2 Have you ever accidentally/ intentionally click on the URL as shown in SMS?<br>
+                <input type="radio" name="ansq6.2">Yes
+                <input type="radio" name="ansq6.2">No<br>
+                Q6.3 Do you think Malicious actions stops immediately when you leave the URL?<br>
+                <input type="radio" name="ansq6.3">Yes
+                <input type="radio" name="ansq6.3">No<br>
+                <br>
+              </fieldset>
+              <br>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+        <div class="video" ></div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

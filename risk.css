@@ -47,7 +47,7 @@ body{
 .pageup{
   float:left;
   width:17%;
-  padding-top: 100%;
+  padding-top: 80%;
   text-align: center;
 }
 
@@ -56,10 +56,13 @@ body{
   width: 66%;
   text-align: left;
   background-color: white;
-  padding: 2%;
+
   font-size: 1.2em;
 }
 
+#risks, #designs, #Questionnarie{
+    padding: 2%;
+}
 #pu{
   font-size: 5em;
   font-style:oblique;
@@ -83,7 +86,14 @@ li{
   border: 5px solid black;
 
 }
-form{
-  visibility: hidden;
 
+form{
+  display: none;
+}
+
+
+#thankyou{
+  font-size: 3em;
+  font-weight: bold;
+  font-style: oblique;
 }

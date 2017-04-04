@@ -25,12 +25,14 @@
         getdisplayid[n].style.display="block";
       	}
 
+
       function show_question(){
         var qn=document.getElementById("form");
-        qn.style.visibility="visible";
+        qn.style.display="block";
+        document.getElementById("background").style.display="none"
       }
 
-      var show=[true, true, true, true, true, true];
+      var show=[true, true, true, true, true];
       function show_more_desgins(m){
         getp=document.getElementById("more_desgins"+m);
         if (show[m]){
@@ -41,6 +43,13 @@
           getp.style.display="none";
           show[m]=true;
         }
+      }
+
+      function thanks(){
+        var qn=document.getElementById("form");
+        qn.style.display="none";
+        document.getElementById("thankyou").innerHTML="Thanks for your help!!"
+        window.alert("Thanks for your help!!")
       }
 
     </script>
@@ -62,7 +71,9 @@
         <div class="content">
 
           <div class="display" id="home">
-            <video></video> video page
+            <video width="880px" controls="controls" >
+              <source src="video_of_risks.mp4" type="video/mp4">
+            </video>
           </div>
 
 
@@ -98,8 +109,9 @@
               it is vital to be aware of own privacy during apps installation.
             </div><br>
 
-            <div class="more_risks" >Google Drive</div>
-            <div>sth
+            <div class="more_risks" >Cloud storage</div>
+            <div>Users need to use password to protect the data online, Cybercriminals can get into those files, whether by guessing security questions or bypassing passwords. If the password is very weak, criminals can use the dictionary to get the password. Even the password is strong, criminals can still use brute force to get the data. It is easy for them to get all the backup data of the smartphone if users backup to Cloud. For the general setting, smart phone will atuomatic upload the backup data to Cloud when the phone connects to WiFi. If users connect to the unsecuerd WiFi outside, the hacker can also steal the backup data and get some useful information.<br>
+              The bigger risk with cloud storage is privacy. Even if data isn’t stolen or published, it can still be viewed. Governments can legally request information stored in the cloud, and it’s up to the cloud services provider to deny access. Tens of thousands of requests for user data are sent to Google, Microsoft, and other businesses each year by government agencies.
             </div><br>
 
             <div class="more_risks" >SMS w/URL: Malvertisement</div>
@@ -118,19 +130,17 @@
               <li onclick="show_more_desgins(0)">Get the latest updates from your mobile manufacturer<br>
                 <p class="more_desgins" id="more_desgins0">In most of the situation, the newly discovered bugs or loopholes can be modified by the latest software update. Therefore, always updating the software to date is important for E-privacy.
                 </p><br></li>
-              <li onclick="show_more_desgins(1)">Install anti-virus program<br>
-                <p class="more_desgins" id="more_desgins1">2</p><br></li>
-              <li onclick="show_more_desgins(2)">Do not download apps from unknown source<br>
-                <p class="more_desgins" id="more_desgins2">Users can download apps from google play store and apple store. However, some of the apps can not be downloaded in these store. This may due to the app is inappropriate, contain virus,etc. Some of the user may download it from other source. Also, some of them may be free in other source but not free in google play and apple store. However, downloading apps from source other than google play store and apple store increase the chances of infected by virus. Also, it may create loophole for hackers to steal users information.
+              <li onclick="show_more_desgins(1)">Do not download apps from unknown source<br>
+                <p class="more_desgins" id="more_desgins1">Users can download apps from google play store and apple store. However, some of the apps can not be downloaded in these store. This may due to the app is inappropriate, contain virus,etc. Some of the user may download it from other source. Also, some of them may be free in other source but not free in google play and apple store. However, downloading apps from source other than google play store and apple store increase the chances of infected by virus. Also, it may create loophole for hackers to steal users information.
                 </p><br></li>
-              <li onclick="show_more_desgins(3)">Check the authorization required before downloading apps<br>
-                <p class="more_desgins" id="more_desgins3">When users download apps from google play store or apple store, they need to agree the app to access some authority such as Photos/Media/Files,etc. Users need to press the accept button in order to download and use that app. Accepting the app to access your Photos/Media/Files means that the app can store, modify your photos, media and files. Therefore, users should think whether the app requires the authorization to work or the app is just trying to steal your information.
+              <li onclick="show_more_desgins(2)">Check the authorization required before downloading apps<br>
+                <p class="more_desgins" id="more_desgins2">When users download apps from google play store or apple store, they need to agree the app to access some authority such as Photos/Media/Files,etc. Users need to press the accept button in order to download and use that app. Accepting the app to access your Photos/Media/Files means that the app can store, modify your photos, media and files. Therefore, users should think whether the app requires the authorization to work or the app is just trying to steal your information.
                 </p><br></li>
-              <li onclick="show_more_desgins(4)">Stay alert to abnormal phone situation and reset phone  if needed<br>
-                <p class="more_desgins" id="more_desgins4">Abnormal phone situation such as rapid reduce of speed and batteries may indicated some apps are running. This apps may contains virus and hacker is stealing information  from your phone. Hence, users should consider resetting the phone if above situation occurs in their phone.
+              <li onclick="show_more_desgins(3)">Stay alert to abnormal phone situation and reset phone  if needed<br>
+                <p class="more_desgins" id="more_desgins3">Abnormal phone situation such as rapid reduce of speed and batteries may indicated some apps are running. This apps may contains virus and hacker is stealing information  from your phone. Hence, users should consider resetting the phone if above situation occurs in their phone.
                 </p><br></li>
-              <li onclick="show_more_desgins(5)">Do not connect public wi-fi (unsecured wi-fi) if possible
-                <p class="more_desgins" id="more_desgins5">	  Try to avoid using unknown, unsecured wi-fi. Some hackers may set-up some phishing wi-fi hotspots that the SSID is same as what user expected. For example, the name of the shopping mall, restaurant. If users connected their mobile phone into these phishing wifi, their information and their internet activities may be stolen by hackers.
+              <li onclick="show_more_desgins(4)">Do not connect public wi-fi (unsecured wi-fi) if possible
+                <p class="more_desgins" id="more_desgins4">	  Try to avoid using unknown, unsecured wi-fi. Some hackers may set-up some phishing wi-fi hotspots that the SSID is same as what user expected. For example, the name of the shopping mall, restaurant. If users connected their mobile phone into these phishing wifi, their information and their internet activities may be stolen by hackers.
 	              <br>Also, some unsecured wi-fi may be set-up by some shop or restaurant so as to provide free wi-fi for their customers. However, the security level of these wi-fi may be low. Hackers may hack the wi-fi and steal the information from  other users connecting that wi-fi.
 	              <br>Therefore, users should avoid using unknown or unsecure wi-fi. Wi-fi provided from your telecommunication service provider is a good example of trusted wi-fi.
                 </p></li>
@@ -139,6 +149,7 @@
 
 
           <div class="display" id="Questionnarie" >
+            <div id="background">
             <h1>Reason for using Questionnarie</h1>
             <p>1-Consideration for respondents<br>
               The format of questionnaires is close-ended. Therefore, it is easier for respondents to answer and lower the risk of respondents losing patience.
@@ -163,9 +174,9 @@
               Paper-based questionnaires were distributed on the 9th March 2017. To ensure the respondents are solely university students, the above-mentioned method was adopted. For online surveys, no doubt, it is relatively cost-effective and time-effective, however, unwanted responses from other groups of people may be received. This may cause time to separate the unwanted responses.
             </p>
             <br>
-            <button onclick="show_question()">Start quiz!</button>
+            <button onclick="show_question()">Our Servey</button>
+            </div>
 
-            <h1 class="form" style="font-size:2.2em;visibility:hidden;">Qucik test to check your Smartphone security</h1>
             <br>
             <form id="form" >
               <fieldset>
@@ -180,44 +191,64 @@
               <br>
               <fieldset>
                 <legend>Type of Risk:</legend>
+
                 Q1.1 Have you ever suffered from the leakage of personal data through smartphones?<br>
                 <input type="radio" name="ansq1.1">Yes
                 <input type="radio" name="ansq1.1">No<br>
-                Q2.1 Did you take steps to protect information on your smartphones by setting passwords for your phones?<br>
+
+                Q1.2 Do you take steps to protect information on your smartphones by setting passwords for your phones?<br>
+                <input type="radio" name="ansq1.2">Yes
+                <input type="radio" name="ansq1.2">No<br>
+
+                Q1.3 Do you take steps to protect information on your smartphones by enabling auto screen lock?<br>
+                <input type="radio" name="ansq1.3">Yes
+                <input type="radio" name="ansq1.3">No<br>
+
+                Q1.4 Do you take steps to protect information on your smartphones by installing anti-virus/anti-theft software?<br>
+                <input type="radio" name="ansq1.4">Yes
+                <input type="radio" name="ansq1.4">No<br>
+
+                Q2.1 Do you share your position?<br>
                 <input type="radio" name="ansq2.1">Yes
                 <input type="radio" name="ansq2.1">No<br>
-                Q2.2 Did you take steps to protect information on your smartphones by enabling auto screen lock?<br>
-                <input type="radio" name="ansq2.2">Yes
-                <input type="radio" name="ansq2.2">No<br>
-                Q2.3 Did you take steps to protect information on your smartphones by installing anti-virus/anti-theft software?<br>
-                <input type="radio" name="ansq2.3">Yes
-                <input type="radio" name="ansq2.3">No<br>
-                Q3.1 Did you set password for your Wifi Hotspot?<br>
+
+                Q3.1 Do you set password for your Wifi Hotspot?<br>
                 <input type="radio" name="ansq3.1">Yes
                 <input type="radio" name="ansq3.1">No<br>
-                Q4.1 Did you install apps to your smartphones?<br>
+
+                Q4.1 Do you install apps to your smartphones?<br>
                 <input type="radio" name="ansq4.1">Yes
                 <input type="radio" name="ansq4.1">No<br>
+
                 Q4.2 Would you consider “Privacy Policy” and “Terms and Conditions” of an app before its installation?<br>
                 <input type="radio" name="ansq4.2">Yes
                 <input type="radio" name="ansq4.2">No<br>
+
                 Q4.3 Are you aware of what information being uploaded and accessed when downloading apps?<br>
                 <input type="radio" name="ansq4.3">Yes
                 <input type="radio" name="ansq4.3">No<br>
-                Q6.1 Did you receive any (suspicious) SMS w/URL?<br>
+
+                Q5.1 Do you backup your Smartphone’s data to cloud?<br>
+                <input type="radio" name="ansq5.1">Yes
+                <input type="radio" name="ansq5.1">No<br>
+
+                Q6.1 Do you receive any (suspicious) SMS w/URL?<br>
                 <input type="radio" name="ansq6.1">Yes
                 <input type="radio" name="ansq6.1">No<br>
+
                 Q6.2 Have you ever accidentally/ intentionally click on the URL as shown in SMS?<br>
                 <input type="radio" name="ansq6.2">Yes
                 <input type="radio" name="ansq6.2">No<br>
+
                 Q6.3 Do you think Malicious actions stops immediately when you leave the URL?<br>
                 <input type="radio" name="ansq6.3">Yes
                 <input type="radio" name="ansq6.3">No<br>
                 <br>
               </fieldset>
               <br>
-              <input type="submit" value="Submit">
+              <input type="button" onclick="thanks()" value="Submit!!">
             </form>
+            <p id="thankyou"></p>
           </div>
         </div>
         <div class="video" ></div>
